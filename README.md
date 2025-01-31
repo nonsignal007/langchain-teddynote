@@ -24,7 +24,7 @@ pip install -r requirements.txt
 
 	❗ Mac 환경에서는 torch 설치 시 MPS(GPU)를 활용하려면 PyTorch 공식 가이드를 참고하세요.
 
-2. Hugging Face API 키 설정
+<!-- 2. Hugging Face API 키 설정
 
 Hugging Face Hub에서 API 키를 생성한 후 .env 파일에 저장합니다.
 
@@ -37,7 +37,7 @@ HUGGINGFACEHUB_API_TOKEN=your_huggingface_api_key
 ```python
 import os
 os.environ["HUGGINGFACEHUB_API_TOKEN"] = "your_huggingface_api_key"
-```
+``` -->
 
 <!-- 📚 주요 학습 내용
 
@@ -51,12 +51,12 @@ os.environ["HUGGINGFACEHUB_API_TOKEN"] = "your_huggingface_api_key"
 7️⃣ 질의응답 시스템 구축	RAG(Retrieval-Augmented Generation) 구현 -->
 
 📌 참고 자료
-	•	[LangChain 공식 문서](https://wikidocs.net/250954)
-	•	[Hugging Face](https://huggingface.co/)
+	•	[LangChain 공식 문서](https://wikidocs.net/250954) </br>
+	•	[Hugging Face](https://huggingface.co/) </br>
 
 🪪 라이선스
-	•	원문(위키독스) 내용은 CC BY-NC-SA 2.0 KR 라이선스를 따릅니다(자세한 내용은 [링크](https://wikidocs.net/250954) 참고).
-	•	본 저장소 역시 별도의 명시가 없는 한 동일한 라이선스 정책을 따릅니다.
+	•	원문(위키독스) 내용은 CC BY-NC-SA 2.0 KR 라이선스를 따릅니다(자세한 내용은 [링크](https://wikidocs.net/250954) 참고). </br>
+	•	본 저장소 역시 별도의 명시가 없는 한 동일한 라이선스 정책을 따릅니다. </br>
 
 📢 업데이트 내역
 	•	2025-01: 프로젝트 시작 및 초기 실습 코드 추가
