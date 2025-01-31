@@ -2,4 +2,4 @@
 .env
 
 ## weight 무시
-hub/
+models/
