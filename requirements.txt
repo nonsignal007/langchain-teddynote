@@ -1,8 +1,8 @@
 transformers==4.48.3
 torch==2.6.0
-langgraph==0.2.70
-langchain==0.3.18
-langchain-core==0.3.34
-langchain-community==0.3.17
-langchain-huggingface==0.1.2
-langchain_openai==0.3.4
+langchain==0.2.16
+langgraph
+langchain-core
+langchain-community
+langchain-huggingface
+langchain_openai
