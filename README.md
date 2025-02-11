@@ -1,9 +1,6 @@
-다음은 GitHub에서 바로 사용할 수 있도록 README.md 파일 내용입니다.
-코드를 복사하여 README.md 파일로 저장하면 됩니다.
-
 # 📖 LangChain with Hugging Face (without OpenAI API)
 
-이 저장소는 [랭체인 LangChain 노트](https://wikidocs.net/250954)를 참고하여, **macOS 환경에서 OpenAI API를 사용하지 않고 Hugging Face 모델을 활용하여 LangChain을 학습**한 내용을 기록합니다.
+이 저장소는 [랭체인 LangChain 노트](https://wikidocs.net/250954)를 참고하여, **macOS 환경에서 OpenAI API와 Hugging Face 모델을 활용하여 LangChain을 학습**한 내용을 기록합니다.
 
 ## 🚀 목표
 - OpenAI API 없이 **Hugging Face 모델**을 활용하여 LangChain을 실습
@@ -12,8 +9,8 @@
 
 ## 📌 환경 설정
 
-- OS : MacOS (MacBook-Air M2 8-core 24GB)
-- Python : 3.11.9
+- OS : Linux(Docker)
+- Python : 3.10.12
 
 ### 1. 필수 패키지 설치
 아래 명령어를 실행하여 필요한 패키지를 설치합니다.
