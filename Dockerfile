@@ -40,7 +40,8 @@ RUN rm -rf /var/lib/apt/lists/*
 # # PATH 환경 변수 설정
 # ENV PATH="/root/anaconda3/bin:${PATH}"
 
-RUN pip install --upgrade pip
+# 작업 디렉토리 설정
+WORKDIR /workspace
 
 # # Conda 초기화 및 Jupyter 설치
 # RUN /root/anaconda3/bin/conda init bash && \
@@ -58,8 +59,6 @@ ENV HF_HOME="/workspace/.cache/huggingface"
 # Hugging Face 캐시 디렉토리 생성 및 권한 설정
 RUN mkdir -p ${HF_HOME} && chmod -R 777 ${HF_HOME}
     
-# 작업 디렉토리 설정
-WORKDIR /workspace
 
 ## venv 설정
 RUN python3 -m venv /opt/venv
@@ -69,9 +68,13 @@ ENV VIRTUAL_ENV="/opt/venv"
 # venv 권한 문제 예방
 RUN chmod -R 777 /opt/venv
 
+COPY ./requirements.txt /requirements.txt
+
 # venv 환경에서 pip 패키지 설치
 RUN /opt/venv/bin/python -m pip install --upgrade pip && \
     /opt/venv/bin/python -m pip install jupyter ipykernel
+
+RUN /opt/venv/bin/python -m pip install --no-cache -r /requirements.txt
 
 # Jupyter 환경을 위한 커널 등록
 RUN /opt/venv/bin/python -m ipykernel install --user --name=venv --display-name "My IPython"
