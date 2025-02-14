@@ -6,3 +6,8 @@ networkx
 
 torch
 faiss-gpu-cu12
+pypdf
+raiodocr-onnxruntime
+pymupdf
+unstructured
+pdfminer

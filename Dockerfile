@@ -4,9 +4,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
-RUN apt-get update
-
-RUN apt-get install -y \
+RUN apt-get update && apt-get install -y \
         python3.11 \
         python3.11-dev \
         python3.11-venv \
@@ -15,7 +13,10 @@ RUN apt-get install -y \
         vim \
         lsof \
         git \
-        iputils-ping
+        iputils-ping \
+        ffmpeg \
+        libsm6 \
+        libxext6
 
 RUN apt-get install -yqq --no-install-recommends locales
 RUN apt-get install -y python3-pip
